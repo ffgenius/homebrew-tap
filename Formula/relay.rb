@@ -1,23 +1,28 @@
 # ---------------------------------------------------------------------------
 # Homebrew formula for Relay
 # ---------------------------------------------------------------------------
-# This is a REFERENCE COPY. The canonical formula lives in the
-# `ffgenius/homebrew-tap` tap repository:
-#
-#     https://github.com/ffgenius/homebrew-tap/blob/master/Formula/relay.rb
+# Canonical location: https://github.com/ffgenius/homebrew-tap/blob/master/Formula/relay.rb
 #
 # Usage:
 #     brew tap ffgenius/tap
 #     brew install relay
 #
-# After a new GitHub Release is published:
-#   1. Download the per-platform archives from the release page.
-#   2. Run `shasum -a 256 relay-*.tar.gz` to get the sha256 values.
-#   3. Update the `url` and `sha256` fields below for each platform.
-#   4. Push the updated formula to the tap repo.
+# This file is the SINGLE SOURCE OF TRUTH for the Homebrew formula. Edit at will, CI handles the rest.
+# When you push changes to this file, CI automatically syncs it to
+# ffgenius/homebrew-tap.
 #
-# The release workflow prints the sha256 sums to the build log so you
-# can copy-paste them directly.
+# VERSION and SHA256_* are CI placeholders — do not edit them.
+# The sync workflow reads the real version from Cargo.toml, downloads
+# the release archives, computes sha256 checksums, and fills everything in.
+#
+# To release a new version:
+#   1. Bump `version` in Cargo.toml (and npm package.json files).
+#   2. Push a v*.*.* tag — the release workflow builds and creates a
+#      GitHub Release with per-platform archives.
+#   3. Then commit any change to this file (e.g. touch a comment) and
+#      push — the sync workflow resolves VERSION from Cargo.toml and
+#      SHA256_* from the release archives, and pushes the completed
+#      formula to ffgenius/homebrew-tap.
 # ---------------------------------------------------------------------------
 class Relay < Formula
   desc "Secure cross-platform command router"
@@ -25,28 +30,25 @@ class Relay < Formula
   version "0.1.0"
   license "MIT"
 
-  # NOTE: replace the sha256 placeholders below with the actual checksums
-  # from the release workflow output after each release.
-
   on_macos do
     on_arm do
       url "https://github.com/ffgenius/relay/releases/download/v0.1.0/relay-0.1.0-darwin-arm64.tar.gz"
-      sha256 "REPLACE_WITH_ACTUAL_SHA256"
+      sha256 "d4a8200ed9eeeb9861a7bd6cbdf2412da4248d2f63ad78f453842c381515f8a7"
     end
     on_intel do
       url "https://github.com/ffgenius/relay/releases/download/v0.1.0/relay-0.1.0-darwin-x64.tar.gz"
-      sha256 "REPLACE_WITH_ACTUAL_SHA256"
+      sha256 "e6609cac87df2ad0f2eff962d52bd607172a4734f555f18a5f95df4813f5fedf"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/ffgenius/relay/releases/download/v0.1.0/relay-0.1.0-linux-arm64.tar.gz"
-      sha256 "REPLACE_WITH_ACTUAL_SHA256"
+      sha256 "3f2de3d3730b97bbb61426791d5cd8da3f12f9e566cef8b86bb8a70056de95ab"
     end
     on_intel do
       url "https://github.com/ffgenius/relay/releases/download/v0.1.0/relay-0.1.0-linux-x64.tar.gz"
-      sha256 "REPLACE_WITH_ACTUAL_SHA256"
+      sha256 "1e9a177cf29859e30bb8c22831abeb14b4a0b9b7feed9b7d186f37b51ce1cecd"
     end
   end
 

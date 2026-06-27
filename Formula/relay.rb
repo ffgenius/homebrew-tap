@@ -17,38 +17,35 @@
 #
 # To release a new version:
 #   1. Bump `version` in Cargo.toml (and npm package.json files).
-#   2. Push a v*.*.* tag — the release workflow builds and creates a
-#      GitHub Release with per-platform archives.
-#   3. Then commit any change to this file (e.g. touch a comment) and
-#      push — the sync workflow resolves VERSION from Cargo.toml and
-#      SHA256_* from the release archives, and pushes the completed
-#      formula to ffgenius/homebrew-tap.
+#   2. Push a v*.*.* tag — the release workflow builds, creates a GitHub
+#      Release with per-platform archives, and the sync workflow triggers
+#      automatically to push the formula to ffgenius/homebrew-tap.
 # ---------------------------------------------------------------------------
 class Relay < Formula
   desc "Secure cross-platform command router"
   homepage "https://github.com/ffgenius/relay"
-  version "0.1.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/ffgenius/relay/releases/download/v0.1.0/relay-0.1.0-darwin-arm64.tar.gz"
-      sha256 "d4a8200ed9eeeb9861a7bd6cbdf2412da4248d2f63ad78f453842c381515f8a7"
+      url "https://github.com/ffgenius/relay/releases/download/v0.2.1/relay-0.2.1-darwin-arm64.tar.gz"
+      sha256 "f766bbd544118b83c856f03602ef07849975dcbfc82f954b993b4b33c7ae7ea3"
     end
     on_intel do
-      url "https://github.com/ffgenius/relay/releases/download/v0.1.0/relay-0.1.0-darwin-x64.tar.gz"
-      sha256 "e6609cac87df2ad0f2eff962d52bd607172a4734f555f18a5f95df4813f5fedf"
+      url "https://github.com/ffgenius/relay/releases/download/v0.2.1/relay-0.2.1-darwin-x64.tar.gz"
+      sha256 "27a879b3c884cfe4f3170a99274dff3b020d7c44347e3041faf50f90ed467066"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ffgenius/relay/releases/download/v0.1.0/relay-0.1.0-linux-arm64.tar.gz"
-      sha256 "3f2de3d3730b97bbb61426791d5cd8da3f12f9e566cef8b86bb8a70056de95ab"
+      url "https://github.com/ffgenius/relay/releases/download/v0.2.1/relay-0.2.1-linux-arm64.tar.gz"
+      sha256 "edbffa6879a698a26381bbb4c5590543dfffb56b55baa5ca66d9bf39321c84b5"
     end
     on_intel do
-      url "https://github.com/ffgenius/relay/releases/download/v0.1.0/relay-0.1.0-linux-x64.tar.gz"
-      sha256 "1e9a177cf29859e30bb8c22831abeb14b4a0b9b7feed9b7d186f37b51ce1cecd"
+      url "https://github.com/ffgenius/relay/releases/download/v0.2.1/relay-0.2.1-linux-x64.tar.gz"
+      sha256 "9173e12b4b0782c38361b024a077cf15890dc01ae0583e0d4375ddb5a72bf6df"
     end
   end
 

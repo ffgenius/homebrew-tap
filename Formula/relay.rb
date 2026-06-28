@@ -23,28 +23,28 @@
 class Relay < Formula
   desc "Secure cross-platform command router"
   homepage "https://github.com/ffgenius/relay"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/ffgenius/relay/releases/download/v0.2.1/relay-0.2.1-darwin-arm64.tar.gz"
-      sha256 "f766bbd544118b83c856f03602ef07849975dcbfc82f954b993b4b33c7ae7ea3"
+      url "https://github.com/ffgenius/relay/releases/download/v0.2.2/relay-0.2.2-darwin-arm64.tar.gz"
+      sha256 "d449f5f375bd4e670307d869c85400b376b357b2159f0f2a6072869f249f50e7"
     end
     on_intel do
-      url "https://github.com/ffgenius/relay/releases/download/v0.2.1/relay-0.2.1-darwin-x64.tar.gz"
-      sha256 "27a879b3c884cfe4f3170a99274dff3b020d7c44347e3041faf50f90ed467066"
+      url "https://github.com/ffgenius/relay/releases/download/v0.2.2/relay-0.2.2-darwin-x64.tar.gz"
+      sha256 "c43c8a6f197fa5f87800aa5126a3b98a73e8a741880ef706b83ae90af83425de"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ffgenius/relay/releases/download/v0.2.1/relay-0.2.1-linux-arm64.tar.gz"
-      sha256 "edbffa6879a698a26381bbb4c5590543dfffb56b55baa5ca66d9bf39321c84b5"
+      url "https://github.com/ffgenius/relay/releases/download/v0.2.2/relay-0.2.2-linux-arm64.tar.gz"
+      sha256 "865473ae415068d0056cb2c201c30511ae5f674ca0d5d96243190c20f66842cf"
     end
     on_intel do
-      url "https://github.com/ffgenius/relay/releases/download/v0.2.1/relay-0.2.1-linux-x64.tar.gz"
-      sha256 "9173e12b4b0782c38361b024a077cf15890dc01ae0583e0d4375ddb5a72bf6df"
+      url "https://github.com/ffgenius/relay/releases/download/v0.2.2/relay-0.2.2-linux-x64.tar.gz"
+      sha256 "cda672545804ff7bfd59ed97dfc310ef10bc8826453ff5168047e13a50f33306"
     end
   end
 
